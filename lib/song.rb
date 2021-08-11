@@ -12,7 +12,7 @@ class Song
         @genre = genre
 
         @@count += 1
-        #will need to add counters for genres and artists
+        # add some shovels for genre and artist lists
         @@genres << genre
         @@artists << artist
     end
@@ -22,7 +22,7 @@ class Song
     end
 
     def self.artists
-        @@artists.uniq
+        @@artists.uniq # removes duplicate values
     end
 
     def self.genres
@@ -30,12 +30,10 @@ class Song
     end
 
     def self.artist_count
-        @@artists.tally
+        @@artists.tally # tally is short way to check for duplicates and tally...
     end
-
 
     def self.genre_count
         @@genres.tally
     end
-
 end
